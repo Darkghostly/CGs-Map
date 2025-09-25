@@ -1,81 +1,81 @@
-Mapa de Expansão e Análise Geográfica
-Este projeto é uma ferramenta de visualização de dados geoespaciais projetada para análises de negócio. Ele gera um mapa HTML interativo a partir de um conjunto de dados JSON, permitindo mapear e analisar pontos de operação, áreas de influência e potenciais locais de expansão para uma empresa.
+## Geographic Expansion and Analysis Map
+This project is a geospatial data visualization tool designed for business analysis. It generates an interactive HTML map from a JSON dataset, allowing for the mapping and analysis of operational points, areas of influence, and potential expansion sites for a company.
 
-O sistema é ideal para equipes de inteligência de mercado, planejamento estratégico e logística que precisam de uma visão clara e customizável de suas operações no terreno.
+The system is ideal for market intelligence, strategic planning, and logistics teams who need a clear and customizable view of their field operations.
 
-(Sugestão: Gere um mapa, tire um screenshot e coloque-o em uma pasta docs/ para referência visual)
+(Suggestion: Generate a map, take a screenshot, and place it in a docs/ folder for visual reference)
 
-✨ Funcionalidades Principais
-Mapa Interativo: Gera um arquivo HTML autônomo que não requer um servidor web para funcionar.
+## Key Features
+Interactive Map: Generates a standalone HTML file that requires no web server to run.
 
-Múltiplas Camadas: Permite alternar entre uma visão de mapa esquemática ("Tática") e imagens de satélite de alta resolução.
+Multiple Layers: Allows toggling between a schematic map view ("Tactical") and high-resolution satellite imagery.
 
-Áreas de Influência: Visualiza um raio de atuação ou influência customizável para cada ponto no mapa.
+Areas of Influence: Visualizes a customizable radius of operation or influence for each point on the map.
 
-Informações Detalhadas: Exibe informações específicas de cada ponto através de pop-ups interativos ao clicar nos marcadores.
+Detailed Information: Displays specific information for each point through interactive popups when markers are clicked.
 
-Visualização de Dependências: Permite traçar linhas entre os pontos para representar fluxos logísticos, dependências ou outras relações.
+Dependency Visualization: Allows drawing lines between points to represent logistical flows, dependencies, or other relationships.
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tech Stack
 Python 3
 
-Folium para a geração dos mapas interativos.
+Folium for generating interactive maps.
 
-🚀 Instalação e Configuração
-Para executar este projeto localmente, siga os passos abaixo.
+## Installation and Setup
+To run this project locally, follow the steps below.
 
-Clone o Repositório
-
-Bash
-
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-Crie e Ative um Ambiente Virtual
+Clone the Repository
 
 Bash
 
-# Criar o ambiente
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+Create and Activate a Virtual Environment
+
+Bash
+
+## Create the environment
 python -m venv venv
 
-# Ativar no Windows (PowerShell)
+## Activate on Windows (PowerShell)
 .\venv\Scripts\Activate.ps1
 
-# Ativar no Linux / macOS
+## Activate on Linux / macOS
 source venv/bin/activate
-Instale as Dependências
-O projeto tem poucas dependências, listadas no arquivo requirements.txt. Para instalá-las, execute:
+Install Dependencies
+The project has minimal dependencies, listed in the requirements.txt file. To install them, run:
 
 Bash
 
 pip install -r requirements.txt
-📈 Como Usar
-Edite os Dados de Entrada
-Abra o arquivo data/centros_gravidade.json. Este arquivo contém a lista de pontos que serão exibidos no mapa. Adicione, remova ou modifique os objetos JSON para refletir os dados da sua empresa. Veja a seção Estrutura de Dados abaixo para mais detalhes.
+📈 Usage
+Edit the Input Data
+Open the file data/centros_gravidade.json. This file contains the list of points that will be displayed on the map. Add, remove, or modify the JSON objects to reflect your company's data. See the Data Structure section below for more details.
 
-Execute o Script de Geração
-Com o ambiente virtual ativado, execute o script principal para gerar o mapa:
+Run the Generation Script
+With the virtual environment activated, run the main script to generate the map:
 
 Bash
 
 python main.py
-Visualize o Resultado
-Após a execução, um novo arquivo será criado em output/mapa_tatico_cg.html. Abra este arquivo em qualquer navegador web (Chrome, Firefox, etc.) para ver e interagir com seu mapa customizado.
+View the Result
+After execution, a new file will be created at output/mapa_tatico_cg.html. Open this file in any web browser (Chrome, Firefox, etc.) to view and interact with your custom map.
 
-📊 Estrutura de Dados
-Para adicionar seus próprios pontos, edite o arquivo data/centros_gravidade.json. Ele é uma lista de objetos, onde cada objeto representa um ponto no mapa e deve seguir a estrutura abaixo:
+📊 Data Structure
+To add your own points, edit the data/centros_gravidade.json file. It is a list of objects, where each object represents a point on the map and must follow the structure below:
 
-Chave	Tipo	Descrição	Exemplo
-nome	String	O nome do ponto de interesse (Ex: Sede, Filial, Centro de Distribuição).	"Porto de Santos"
-tipo	String	A categoria ou tipo do ponto.	"Logística/Econômico"
-coord	Array (Float)	As coordenadas geográficas no formato [latitude, longitude].	[-23.96, -46.30]
-vulnerabilidade	Integer	Um índice de 0 a 100. Pode ser usado para representar prioridade, risco ou potencial.	70
-impacto	String	Descrição do impacto estratégico ou da função do ponto.	"Interrupção de 40% do fluxo..."
-cor	String	A cor do marcador no mapa (Ex: "red", "blue", "green", "orange").	"orange"
-raio_influencia	Integer	O raio da área de influência em metros.	20000
+Key	Type	Description	Example
+nome	String	The name of the point of interest (e.g., Headquarters, Branch, Distribution Center).	"Porto de Santos"
+tipo	String	The category or type of the point.	"Logistics/Economic"
+coord	Array (Float)	The geographic coordinates in [latitude, longitude] format.	[-23.96, -46.30]
+vulnerabilidade	Integer	An index from 0 to 100. Can be used to represent priority, a risk score, or potential.	70
+impacto	String	Description of the strategic impact or function of the point.	"Disruption of 40% of the import/export flow..."
+cor	String	The color of the marker on the map (e.g., "red", "blue", "green", "orange").	"orange"
+raio_influencia	Integer	The radius of the influence area in meters.	20000
 
 Exportar para as Planilhas
-🤝 Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue para reportar bugs ou sugerir novas funcionalidades. Se desejar contribuir com código, por favor, abra um Pull Request.
+🤝 Contributing
+Contributions are welcome! Feel free to open an issue to report bugs or suggest new features. If you would like to contribute code, please open a Pull Request.
 
-📄 Licença
-Este projeto está licenciado sob a Licença MIT.
+📄 License
+This project is licensed under the MIT License.
