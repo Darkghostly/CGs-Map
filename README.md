@@ -6,20 +6,20 @@ The system is ideal for market intelligence, strategic planning, and logistics t
 (Suggestion: Generate a map, take a screenshot, and place it in a docs/ folder for visual reference)
 
 ## Key Features
-Interactive Map: Generates a standalone HTML file that requires no web server to run.
+- Interactive Map: Generates a standalone HTML file that requires no web server to run.
 
-Multiple Layers: Allows toggling between a schematic map view ("Tactical") and high-resolution satellite imagery.
+- Multiple Layers: Allows toggling between a schematic map view ("Tactical") and high-resolution satellite imagery.
 
-Areas of Influence: Visualizes a customizable radius of operation or influence for each point on the map.
+- Areas of Influence: Visualizes a customizable radius of operation or influence for each point on the map.
 
-Detailed Information: Displays specific information for each point through interactive popups when markers are clicked.
+- Detailed Information: Displays specific information for each point through interactive popups when markers are clicked.
 
-Dependency Visualization: Allows drawing lines between points to represent logistical flows, dependencies, or other relationships.
+- Dependency Visualization: Allows drawing lines between points to represent logistical flows, dependencies, or other relationships.
 
 ## 🛠️ Tech Stack
-Python 3
+- Python 3
 
-Folium for generating interactive maps.
+- Folium for generating interactive maps.
 
 ## Installation and Setup
 To run this project locally, follow the steps below.
@@ -84,4 +84,5 @@ Contributions are welcome! Feel free to open an issue to report bugs or suggest 
 
 📄 License
 This project is licensed under the MIT License.
+
 
