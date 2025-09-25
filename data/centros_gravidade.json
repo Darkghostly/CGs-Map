@@ -1,0 +1,11 @@
+[
+    {
+        "nome": "Porto de Santos",
+        "tipo": "Logística/Econômico",
+        "coord": [-23.965883916598994, -46.301932974267096],
+        "vulnerabilidade": 70,
+        "impacto": "Interrupção de 40% do fluxo de importação/exportação do país.",
+        "cor": "orange",
+        "raio_influencia": 20000
+    }
+]

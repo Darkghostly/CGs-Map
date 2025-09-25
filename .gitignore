@@ -1,0 +1,12 @@
+# Arquivos de output gerados
+/output/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos de ambiente virtual
+.env
+.venv
+venv/
+env/
