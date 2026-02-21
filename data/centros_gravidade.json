@@ -1,11 +1,51 @@
 [
     {
+        "id": "cg_porto",
         "nome": "Porto de Santos",
         "tipo": "Logística/Econômico",
-        "coord": [-23.965883916598994, -46.301932974267096],
+        "coord": [-23.9658, -46.3019],
         "vulnerabilidade": 70,
-        "impacto": "Interrupção de 40% do fluxo de importação/exportação do país.",
+        "impacto": "Interrupção de 40% do fluxo de importação/exportação.",
         "cor": "orange",
-        "raio_influencia": 20000
+        "raio_influencia": 20000,
+        "conexoes": [
+            {"destino": "cg_usina", "cor": "yellow", "tipo": "Dependência Energética Crítica"}
+        ]
+    },
+    {
+        "id": "cg_polo_tech",
+        "nome": "Pólo Tecnológico e Defesa",
+        "tipo": "Tecnologia/Dados",
+        "coord": [-23.1539, -45.7951],
+        "vulnerabilidade": 45,
+        "impacto": "Perda de dados de inteligência e capacidade de monitoramento.",
+        "cor": "blue",
+        "raio_influencia": 15000,
+        "conexoes": [
+            {"destino": "cg_torre", "cor": "cyan", "tipo": "Link de Dados Primário"}
+        ]
+    },
+    {
+        "id": "cg_usina",
+        "nome": "Usina Termelétrica",
+        "tipo": "Energia",
+        "coord": [-23.8642, -46.4011],
+        "vulnerabilidade": 85,
+        "impacto": "Blecaute na cadeia de suprimentos.",
+        "cor": "red",
+        "raio_influencia": 12000
+    },
+    {
+        "id": "cg_torre",
+        "nome": "Torre de Retransmissão",
+        "tipo": "Comunicação",
+        "coord": [-23.5505, -46.6333],
+        "vulnerabilidade": 60,
+        "impacto": "Queda no link de dados principal.",
+        "cor": "green",
+        "raio_influencia": 18000,
+        "conexoes": [
+            {"destino": "cg_porto", "cor": "white", "tipo": "Comunicação Logística"}
+        ]
     }
 ]
